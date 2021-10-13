@@ -2,30 +2,36 @@ const ul = document.querySelector("ul.list");
 
 for (let i = 1; i < 101; i++) {
     let element;
-    let x = document.querySelector("li.box");
     console.log(i);
-    if (i % 3 == 0) {
 
-        x.classList.add("fizz");
+    if (i % 3 == 0 && i % 5 == 1) {
         element = `<li class="box box${i}">Fizz</li>`;
-        console.log("Fizz");
+        console.log(`box${i}`)
+        ul.innerHTML += element;
+        let x = document.getElementsByClassName(`box${i}`)[0];
+        x.classList.add("fizz")
     }
 
-    else if (i % 5 == 0) {
+    else if (i % 5 == 0 && i % 3 == 1) {
         element = `<li class="box box${i}">Buzz</li>`;
-        console.log("Fuzz");
+        ul.innerHTML += element;
+        let x = document.getElementsByClassName(`box${i}`)[0];
+        x.classList.add("fuzz")
     }
 
     else if (i % 3 == 0 && i % 5 == 0) {
         element = `<li class="box box${i}">FizzBuzz</li>`;
+        ul.innerHTML += element;
+        let x = document.getElementsByClassName(`box${i}`)[0];
+        x.classList.add("fizzfuzz")
     }
 
     else {
         element = `<li class="box box${i}">${i}</li>`;
-        console.log("Else");
+        ul.innerHTML += element;
     }
 
-    ul.innerHTML += element;
+
 }
 
 
