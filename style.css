@@ -1,0 +1,14 @@
+h1{
+    font-size: 5rem;
+}
+
+
+.box{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3D88AE;
+    margin: 10px;
+}
