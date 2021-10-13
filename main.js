@@ -4,7 +4,7 @@ for (let i = 1; i < 101; i++) {
     let element;
     console.log(i);
 
-    if (i % 3 == 0 && i % 5 == 1) {
+    if (i % 3 == 0 && (i % 5 == 0) == false) {
         element = `<li class="box box${i}">Fizz</li>`;
         console.log(`box${i}`)
         ul.innerHTML += element;
@@ -12,7 +12,7 @@ for (let i = 1; i < 101; i++) {
         x.classList.add("fizz")
     }
 
-    else if (i % 5 == 0 && i % 3 == 1) {
+    else if (i % 5 == 0 && (i % 3 == 0) == false) {
         element = `<li class="box box${i}">Buzz</li>`;
         ul.innerHTML += element;
         let x = document.getElementsByClassName(`box${i}`)[0];
